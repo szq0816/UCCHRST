@@ -101,19 +101,6 @@ class Solver(object):
 
             print(I2T_MAP, T2I_MAP)
 
-            self.config.EVAL = True
-
-            print("Final Testing...")
-
-            ## load checkpoint
-            file_name = self.dataset + '_hash_' + str(self.nbits) + ".pth"
-            ckp_path = osp.join(self.model_dir, 'hash', file_name)
-            load_checkpoints(self, ckp_path)
-
-            img2text, text2img = self.evaluate()
-            print('I2T:', img2text, ', T2I:', text2img)
-            self.config.EVAL = False
-
             time_elapsed = time.time() - start_time
             print(f'Total Train Time: {int(time_elapsed // 60)}m {int(time_elapsed % 60)}s')
 

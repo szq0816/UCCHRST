@@ -10,5 +10,5 @@ We release the three experimental datasets as follows:
 ### Demo 
 Taking MIR Flickr as an example, our model can be trained and verified by the following command:
 ```bash
-bash test-flickr.sh
+run demo.py
 ```
